@@ -1,0 +1,54 @@
+body {
+    background-image: url("/world.png");
+}
+
+h1 {
+    font-family: Oswald;
+    text-align: center;
+}
+
+.flex-container {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    height: 500px;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 500px;
+}
+
+.card {
+    aspect-ratio: 1 / 1;
+    font-family: Sono;
+    height: 30%;
+    text-align: center;
+    /*transition: effect after hovering */
+    transition: all 1s linear;
+    /*transform-style: Specifies that child elements will preserve its 3D position*/
+    transform-style: preserve-3d;
+}
+
+.card-page {
+    backface-visibility: hidden;
+    border-radius: 10px;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.front {
+    background-color: bisque;
+    color: orange;
+    z-index: 1;
+}
+
+.back {
+    background-color: orange;
+    color: bisque;
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
